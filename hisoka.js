@@ -685,12 +685,12 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                 }
             }
             break
-            case 'jodohku': {
+            case 'mysoulmate': {
             if (!m.isGroup) throw mess.group
             let member = participants.map(u => u.id)
             let me = m.sender
             let jodoh = member[Math.floor(Math.random() * member.length)]
-            let jawab = `👫Jodoh mu adalah
+            let jawab = `👫Your match is
 
 @${me.split('@')[0]} ❤️ @${jodoh.split('@')[0]}`
             let ments = [me, jodoh]
@@ -835,7 +835,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                 if (!isAdmins) throw mess.admin
 let teks = `══✪〘 *👥 Tag All* 〙✪══
  
- ➲ *Pesan : ${q ? q : 'kosong'}*\n\n`
+ ➲ *Message : ${q ? q : 'Blank'}*\n\n`
                 for (let mem of participants) {
                 teks += `⭔ @${mem.id.split('@')[0]}\n`
                 }
@@ -1138,13 +1138,13 @@ break
                     await sleep(1500)
                     let btn = [{
                                 urlButton: {
-                                    displayText: 'Source Code',
-                                    url: 'https://github.com/DikaArdnt/Hisoka-Morou'
+                                    displayText: 'Instagram',
+                                    url: 'https://instagram.com/_03.kami?utm_medium=copy_link'
                                 }
                             }, {
                                 callButton: {
                                     displayText: 'Number Phone Owner',
-                                    phoneNumber: '+62 882-9202-4190'
+                                    phoneNumber: '+92 302 1206454'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -1177,13 +1177,13 @@ break
 		    await sleep(1500)
 		    let btn = [{
                                 urlButton: {
-                                    displayText: 'Source Code',
-                                    url: 'https://github.com/DikaArdnt/Hisoka-Morou'
+                                    displayText: 'Instagram',
+                                    url: 'https://instagram.com/_03.kami?utm_medium=copy_link'
                                 }
                             }, {
                                 callButton: {
                                     displayText: 'Number Phone Owner',
-                                    phoneNumber: '+62 882-9202-4190'
+                                    phoneNumber: '+92 302 1206454'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -1963,7 +1963,7 @@ break
             }
             break
 	        case 'tiktok': case 'tiktoknowm': {
-                if (!text) throw 'Masukkan Query Link!'
+                if (!text) throw 'Enter Query Link!'
                 m.reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/downloader/tiktok', { url: text }, 'apikey'))
                 let buttons = [
@@ -1981,7 +1981,7 @@ break
             }
             break
             case 'tiktokwm': case 'tiktokwatermark': {
-                if (!text) throw 'Masukkan Query Link!'
+                if (!text) throw 'Enter Query Link!'
                 m.reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/downloader/tiktok', { url: text }, 'apikey'))
                 let buttons = [
@@ -1999,7 +1999,7 @@ break
             }
             break
             case 'tiktokmp3': case 'tiktokaudio': {
-                if (!text) throw 'Masukkan Query Link!'
+                if (!text) throw 'Enter Query Link!'
                 m.reply(mess.wait)
                 let anu = await fetchJson(api('zenz', '/downloader/musically', { url: text }, 'apikey'))
                 let buttons = [
@@ -2692,7 +2692,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 │⭔ ${prefix}heleh
 │⭔ ${prefix}holoh
 │⭔ ${prefix}jadian
-│⭔ ${prefix}jodohku
+│⭔ ${prefix}mysoulmate
 │⭔ ${prefix}delttt
 │⭔ ${prefix}tictactoe
 │⭔ ${prefix}family100
@@ -2835,13 +2835,13 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 └───────⭓`
                 let btn = [{
                                 urlButton: {
-                                    displayText: 'Source Code',
-                                    url: 'https://github.com/DikaArdnt/Hisoka-Morou'
+                                    displayText: 'Instagram',
+                                    url: 'https://instagram.com/_03.kami?utm_medium=copy_link'
                                 }
                             }, {
                                 callButton: {
                                     displayText: 'Number Phone Owner',
-                                    phoneNumber: '+62 882-9202-4190'
+                                    phoneNumber: '+92 302 1206454'
                                 }
                             }, {
                                 quickReplyButton: {
