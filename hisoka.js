@@ -1210,7 +1210,7 @@ break
             case 'infochat': {
                 if (!m.quoted) m.reply('Reply Message')
                 let msg = await m.getQuotedObj()
-                if (!m.quoted.isBaileys) throw 'Pesan tersebut bukan dikirim oleh bot!'
+                if (!m.quoted.isBaileys) throw 'The Message Was Not Sent by a Bot!'
                 let teks = ''
                 for (let i of msg.userReceipt) {
                     let read = i.readTimestamp
