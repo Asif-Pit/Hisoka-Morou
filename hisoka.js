@@ -286,10 +286,10 @@ ${Array.from(room.jawaban, (jawaban, index) => {
 	    }
 	    if (!isSurrender && 1 > (ok = room.game.turn(m.sender === room.game.playerO, parseInt(m.text) - 1))) {
 	    m.reply({
-	    '-3': 'Game telah berakhir',
+	    '-3': 'Game Has Ended',
 	    '-2': 'Invalid',
-	    '-1': 'Posisi Invalid',
-	    0: 'Posisi Invalid',
+	    '-1': 'Position Invalid',
+	    0: 'Position Invalid',
 	    }[ok])
 	    return !0
 	    }
@@ -321,11 +321,11 @@ ${arr.slice(0, 3).join('')}
 ${arr.slice(3, 6).join('')}
 ${arr.slice(6).join('')}
 
-${isWin ? `@${winner.split('@')[0]} Menang!` : isTie ? `Game berakhir` : `Giliran ${['❌', '⭕'][1 * room.game._currentTurn]} (@${room.game.currentTurn.split('@')[0]})`}
+${isWin ? `@${winner.split('@')[0]} Menang!` : isTie ? `Game Over` : `Turn ${['❌', '⭕'][1 * room.game._currentTurn]} (@${room.game.currentTurn.split('@')[0]})`}
 ❌: @${room.game.playerX.split('@')[0]}
 ⭕: @${room.game.playerO.split('@')[0]}
 
-Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
+When *Gives Up* To Surrender And Admit Defeat`
 	    if ((room.game._currentTurn ^ isSurrender ? room.x : room.o) !== m.chat)
 	    room[room.game._currentTurn ^ isSurrender ? 'x' : 'o'] = m.chat
 	    if (room.x !== room.o) await hisoka.sendText(room.x, str, m, { mentions: parseMention(str) } )
@@ -446,7 +446,7 @@ Selama ${clockString(new Date - user.afkTime)}
             if (Object.values(this.game).find(room => room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender))) throw 'Kamu masih didalam game'
             let room = Object.values(this.game).find(room => room.state === 'WAITING' && (text ? room.name === text : true))
             if (room) {
-            m.reply('Partner ditemukan!')
+            m.reply('Partners Found!')
             room.o = m.chat
             room.game.playerO = m.sender
             room.state = 'PLAYING'
@@ -471,9 +471,9 @@ ${arr.slice(0, 3).join('')}
 ${arr.slice(3, 6).join('')}
 ${arr.slice(6).join('')}
 
-Menunggu @${room.game.currentTurn.split('@')[0]}
+Waiting @${room.game.currentTurn.split('@')[0]}
 
-Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
+When *Gives Up* To Surrender And Admit Defeat`
             if (room.x !== room.o) await hisoka.sendText(room.x, str, m, { mentions: parseMention(str) } )
             await hisoka.sendText(room.o, str, m, { mentions: parseMention(str) } )
             } else {
@@ -485,7 +485,7 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
             state: 'WAITING'
             }
             if (text) room.name = text
-            m.reply('Menunggu partner' + (text ? ` mengetik command dibawah ini ${prefix}${command} ${text}` : ''))
+            m.reply('Waiting For Partner' + (text ? ` Type The Command Below ini ${prefix}${command} ${text}` : ''))
             this.game[room.id] = room
             }
             }
@@ -495,12 +495,12 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
             try {
             if (this.game) {
             delete this.game
-            hisoka.sendText(m.chat, `Berhasil delete session TicTacToe`, m)
+            hisoka.sendText(m.chat, `Succeed delete session TicTacToe`, m)
             } else if (!this.game) {
-            m.reply(`Session TicTacToe🎮 tidak ada`)
+            m.reply(`Session TicTacToe🎮 There isn't Any`)
             } else throw '?'
             } catch (e) {
-            m.reply('rusak')
+            m.reply('Damaged')
             }
             }
             break
