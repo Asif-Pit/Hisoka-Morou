@@ -26,7 +26,7 @@ global.sessionName = 'hisoka'
 global.prefa = ['','!','.','🐦','🐤','🗿']
 global.sp = '⭔'
 global.mess = {
-    success: '✓ Success',
+    success: 'Success...✅',
     admin: 'Group Admin Special Features!',
     botAdmin: 'Bot Must Be Admin First!',
     owner: 'Owner Bots Special Features',
