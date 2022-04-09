@@ -1133,7 +1133,7 @@ break
                 let getGroups = await hisoka.groupFetchAllParticipating()
                 let groups = Object.entries(getGroups).slice(0).map(entry => entry[1])
                 let anu = groups.map(v => v.id)
-                m.reply(`Mengirim Broadcast Ke ${anu.length} Group Chat, Waktu Selesai ${anu.length * 1.5} detik`)
+                m.reply(`Send Broadcast To ${anu.length} Group Chat, Time's up ${anu.length * 1.5} Second`)
                 for (let i of anu) {
                     await sleep(1500)
                     let btn = [{
@@ -1165,14 +1165,14 @@ break
                       let txt = `「 Broadcast Bot 」\n\n${text}`
                       hisoka.send5ButImg(i, txt, hisoka.user.name, global.thumb, btn)
                     }
-                m.reply(`Sukses Mengirim Broadcast Ke ${anu.length} Group`)
+                m.reply(`Successfully Sending Broadcast To ${anu.length} Group`)
             }
             break
             case 'bc': case 'broadcast': case 'bcall': {
                 if (!isCreator) throw mess.owner
                 if (!text) throw `Text mana?\n\nExample : ${prefix + command} fatih-san`
                 let anu = await store.chats.all().map(v => v.id)
-                m.reply(`Mengirim Broadcast Ke ${anu.length} Chat\nWaktu Selesai ${anu.length * 1.5} detik`)
+                m.reply(`Successfully Sending Broadcast To ${anu.length} Chat\nTime's up ${anu.length * 1.5} Second`)
 		for (let yoi of anu) {
 		    await sleep(1500)
 		    let btn = [{
@@ -1208,7 +1208,7 @@ break
             }
             break
             case 'infochat': {
-                if (!m.quoted) m.reply('Reply Pesan')
+                if (!m.quoted) m.reply('Reply Message')
                 let msg = await m.getQuotedObj()
                 if (!m.quoted.isBaileys) throw 'Pesan tersebut bukan dikirim oleh bot!'
                 let teks = ''
@@ -1217,7 +1217,7 @@ break
                     let unread = i.receiptTimestamp
                     let waktu = read ? read : unread
                     teks += `⭔ @${i.userJid.split('@')[0]}\n`
-                    teks += ` ┗━⭔ *Waktu :* ${moment(waktu * 1000).format('DD/MM/YY HH:mm:ss')} ⭔ *Status :* ${read ? 'Dibaca' : 'Terkirim'}\n\n`
+                    teks += ` ┗━⭔ *Time :* ${moment(waktu * 1000).format('DD/MM/YY HH:mm:ss')} ⭔ *Status :* ${read ? 'Be Read' : 'Sent'}\n\n`
                 }
                 hisoka.sendTextWithMentions(m.chat, teks, m)
             }
@@ -1244,7 +1244,7 @@ break
                  let teks = `⬣ *LIST GROUP CHAT*\n\nTotal Group : ${anu.length} Group\n\n`
                  for (let i of anu) {
                      let metadata = await hisoka.groupMetadata(i)
-                     teks += `⬡ *Nama :* ${metadata.subject}\n⬡ *Owner :* @${metadata.owner.split('@')[0]}\n⬡ *ID :* ${metadata.id}\n⬡ *Dibuat :* ${moment(metadata.creation * 1000).tz('Asia/Jakarta').format('DD/MM/YYYY HH:mm:ss')}\n⬡ *Member :* ${metadata.participants.length}\n\n────────────────────────\n\n`
+                     teks += `⬡ *Name :* ${metadata.subject}\n⬡ *Owner :* @${metadata.owner.split('@')[0]}\n⬡ *ID :* ${metadata.id}\n⬡ *Made :* ${moment(metadata.creation * 1000).tz('Asia/Jakarta').format('DD/MM/YYYY HH:mm:ss')}\n⬡ *Member :* ${metadata.participants.length}\n\n────────────────────────\n\n`
                  }
                  hisoka.sendTextWithMentions(m.chat, teks, m)
              }
@@ -1256,7 +1256,7 @@ break
              }
              break
             case 'sticker': case 's': case 'stickergif': case 'sgif': {
-            if (!quoted) throw `Balas Video/Image Dengan Caption ${prefix + command}`
+            if (!quoted) throw `Reply Video/Image With Caption ${prefix + command}`
             m.reply(mess.wait)
                     if (/image/.test(mime)) {
                 let media = await quoted.download()
