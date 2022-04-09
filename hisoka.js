@@ -137,14 +137,14 @@ module.exports = hisoka = async (hisoka, m, chatUpdate, store) => {
 	  // Anti Link
         if (db.data.chats[m.chat].antilink) {
         if (budy.match(`chat.whatsapp.com`)) {
-        m.reply(`「 ANTI LINK 」\n\nKamu terdeteksi mengirim link group, maaf kamu akan di kick !`)
-        if (!isBotAdmins) return m.reply(`Ehh bot gak admin T_T`)
+        m.reply(`「 ANTI LINK 」\n\nYou Have Been Detected Sending a Group Link, Sorry You Will Be Kicked`)
+        if (!isBotAdmins) return m.reply(`Eh bot not admin T_T`)
         let gclink = (`https://chat.whatsapp.com/`+await hisoka.groupInviteCode(m.chat))
         let isLinkThisGc = new RegExp(gclink, 'i')
         let isgclink = isLinkThisGc.test(m.text)
-        if (isgclink) return m.reply(`Ehh maaf gak jadi, karena kamu ngirim link group ini`)
-        if (isAdmins) return m.reply(`Ehh maaf kamu admin`)
-        if (isCreator) return m.reply(`Ehh maaf kamu owner bot ku`)
+        if (isgclink) return m.reply(`Uh Sorry It Didnt Happen, Because You Sent The Group link ini`)
+        if (isAdmins) return m.reply(`Ehh Sorry You Admin 😛`)
+        if (isCreator) return m.reply(`Ehh Sorry You're The Owner Of My Bot 🙇‍♂`)
         hisoka.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         }
         }
