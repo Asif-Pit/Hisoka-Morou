@@ -728,7 +728,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             break  
             case 'join': {
                 if (!isCreator) throw mess.owner
-                if (!text) throw 'Masukkan Link Group!'
+                if (!text) throw 'Enter The Group Link!'
                 if (!isUrl(args[0]) && !args[0].includes('whatsapp.com')) throw 'Link Invalid!'
                 m.reply(mess.wait)
                 let result = args[0].split('https://chat.whatsapp.com/')[1]
@@ -745,7 +745,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                if (!text) throw `Example : ${prefix + command} packname|author`
           global.packname = text.split("|")[0]
           global.author = text.split("|")[1]
-          m.reply(`Exif berhasil diubah menjadi\n\n⭔ Packname : ${global.packname}\n⭔ Author : ${global.author}`)
+          m.reply(`Exif Has Been Successfully Changed To\n\n⭔ Packname : ${global.packname}\n⭔ Author : ${global.author}`)
             }
             break
 	case 'kick': {
@@ -864,16 +864,16 @@ let teks = `══✪〘 *👥 Tag All* 〙✪══
 	    break
                case 'vote': {
             if (!m.isGroup) throw mess.group
-            if (m.chat in vote) throw `_Masih ada vote di chat ini!_\n\n*${prefix}hapusvote* - untuk menghapus vote`
-            if (!text) throw `Masukkan Alasan Melakukan Vote, Example: *${prefix + command} Owner Ganteng*`
-            m.reply(`Vote dimulai!\n\n*${prefix}upvote* - untuk ya\n*${prefix}devote* - untuk tidak\n*${prefix}cekvote* - untuk mengecek vote\n*${prefix}hapusvote* - untuk menghapus vote`)
+            if (m.chat in vote) throw `_There Are Still Votes In Chat ini!_\n\n*${prefix}hapusvote* - To Delete Votes`
+            if (!text) throw `Enter Reason for Vote, Example: *${prefix + command} Owner Handsome*`
+            m.reply(`Voting Starts!\n\n*${prefix}upvote* - For Sure\n*${prefix}devote* - For Not\n*${prefix}cekvote* - To Check The Vote\n*${prefix}hapusvote* - To Delete Votes`)
             vote[m.chat] = [q, [], []]
             await sleep(1000)
             upvote = vote[m.chat][1]
             devote = vote[m.chat][2]
             teks_vote = `*「 VOTE 」*
 
-*Alasan:* ${vote[m.chat][0]}
+*Reason:* ${vote[m.chat][0]}
 
 ┌〔 UPVOTE 〕
 │ 
@@ -889,7 +889,7 @@ let teks = `══✪〘 *👥 Tag All* 〙✪══
 │ 
 └────
 
-*${prefix}hapusvote* - untuk menghapus vote`
+*${prefix}hapusvote* - To Delete Votes`
 let buttonsVote = [
   {buttonId: `${prefix}upvote`, buttonText: {displayText: '𝚄𝙿𝚅𝙾𝚃𝙴'}, type: 1},
   {buttonId: `${prefix}devote`, buttonText: {displayText: '𝙳𝙴𝚅𝙾𝚃𝙴'}, type: 1}
@@ -906,15 +906,15 @@ let buttonsVote = [
             break
                case 'upvote': {
             if (!m.isGroup) throw mess.group
-            if (!(m.chat in vote)) throw `_*tidak ada voting digrup ini!*_\n\n*${prefix}vote* - untuk memulai vote`
+            if (!(m.chat in vote)) throw `_*No Voting In The Group ini!*_\n\n*${prefix}vote* - To Start Voting`
             isVote = vote[m.chat][1].concat(vote[m.chat][2])
             wasVote = isVote.includes(m.sender)
-            if (wasVote) throw 'Kamu Sudah Vote'
+            if (wasVote) throw 'To Start Vloting'
             vote[m.chat][1].push(m.sender)
             menvote = vote[m.chat][1].concat(vote[m.chat][2])
             teks_vote = `*「 VOTE 」*
 
-*Alasan:* ${vote[m.chat][0]}
+*Reason:* ${vote[m.chat][0]}
 
 ┌〔 UPVOTE 〕
 │ 
@@ -930,7 +930,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
 │ 
 └────
 
-*${prefix}hapusvote* - untuk menghapus vote`
+*${prefix}hapusvote* - To Delete Votes`
             let buttonsUpvote = [
               {buttonId: `${prefix}upvote`, buttonText: {displayText: '𝚄𝙿𝚅𝙾𝚃𝙴'}, type: 1},
               {buttonId: `${prefix}devote`, buttonText: {displayText: '𝙳𝙴𝚅𝙾𝚃𝙴'}, type: 1}
@@ -948,15 +948,15 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
              break
                 case 'devote': {
             if (!m.isGroup) throw mess.group
-            if (!(m.chat in vote)) throw `_*tidak ada voting digrup ini!*_\n\n*${prefix}vote* - untuk memulai vote`
+            if (!(m.chat in vote)) throw `_*No Voting In The Group ini!*_\n\n*${prefix}vote* - To Start Voting`
             isVote = vote[m.chat][1].concat(vote[m.chat][2])
             wasVote = isVote.includes(m.sender)
-            if (wasVote) throw 'Kamu Sudah Vote'
+            if (wasVote) throw 'Youve Voted'
             vote[m.chat][2].push(m.sender)
             menvote = vote[m.chat][1].concat(vote[m.chat][2])
             teks_vote = `*「 VOTE 」*
 
-*Alasan:* ${vote[m.chat][0]}
+*Reason:* ${vote[m.chat][0]}
 
 ┌〔 UPVOTE 〕
 │ 
@@ -972,7 +972,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
 │ 
 └────
 
-*${prefix}hapusvote* - untuk menghapus vote`
+*${prefix}hapusvote* - To Delete Votes`
             let buttonsDevote = [
               {buttonId: `${prefix}upvote`, buttonText: {displayText: '𝚄𝙿𝚅𝙾𝚃𝙴'}, type: 1},
               {buttonId: `${prefix}devote`, buttonText: {displayText: '𝙳𝙴𝚅𝙾𝚃𝙴'}, type: 1}
@@ -991,10 +991,10 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                  
 case 'cekvote':
 if (!m.isGroup) throw mess.group
-if (!(m.chat in vote)) throw `_*tidak ada voting digrup ini!*_\n\n*${prefix}vote* - untuk memulai vote`
+if (!(m.chat in vote)) throw `_*No Voting In The Group ini!*_\n\n*${prefix}vote* - To Start Voting`
 teks_vote = `*「 VOTE 」*
 
-*Alasan:* ${vote[m.chat][0]}
+*Reason:* ${vote[m.chat][0]}
 
 ┌〔 UPVOTE 〕
 │ 
@@ -1010,7 +1010,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
 │ 
 └────
 
-*${prefix}hapusvote* - untuk menghapus vote
+*${prefix}hapusvote* - To Delete Votes
 
 
 ©${hisoka.user.id}
@@ -1021,7 +1021,7 @@ break
             if (!m.isGroup) throw mess.group
             if (!(m.chat in vote)) throw `_*tidak ada voting digrup ini!*_\n\n*${prefix}vote* - untuk memulai vote`
             delete vote[m.chat]
-            m.reply('Berhasil Menghapus Sesi Vote Di Grup Ini')
+            m.reply('Successfully Delete Vote Session In Group Ini')
 	    }
             break
                case 'group': case 'grup': {
