@@ -533,11 +533,12 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             }
             break
 	    case 'donasi': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
-                hisoka.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74fd634010128be37972c.jpg' }, caption: `*Hi Bro/Sis ${m.pushName}*\n\n Bot Rental Prices\n⭔ 13k Per Group via E-Walet 1 Month\n⭔ 18k via pulsa 1 Month\n\n Premium Price Bot\n⭔ 8k per User 1 bulan\n\nPayment can be via Paypal/link aja/pulsa\n\nFor more details, you can chat with the owner\nhttps://wa.me/40373807823 (Owner)\n\nWanna Talk With Me?  : \n\n⭔ Instagram : https://instagram.com/_03.kami?utm_medium=copy_link\n⭔ Pinterest : https://pin.it/5PuSGvt` }, { quoted: m })
+                hisoka.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74fd634010128be37972c.jpg' }, caption: `*Hi Bro/Sis ${m.pushName}*\n\n Bot Rental Prices\n⭔ 13k Per Group via E-Walet 1 Month\n⭔ 18k via pulsa 1 Month\n\n Premium Price Bot\n⭔ 8k per User 1 bulan\n\nPayment can be via Paypal/link aja/pulsa\n\nFor more details, you can chat with the owner\nhttps://wa.me/923474187615 (Owner)\n\nWanna Talk With Me?  : \n\n⭔ 🎀❤️🎀 : զ⃝մҽҽղ__👀✨
+Եօ ʍҽ, վօմ ɑɾҽ ԹҽɾƒҽϲԵ.🌸💘〽️` }, { quoted: m })
             }
             break
             case 'sc': {
-                m.reply('Script : Sorry This Is Not a Script I Made it Just For Myself\n\n😛\n\nWanna Talk With Me?  : 40373807823 (Link Aja)\nInstagram  : https://instagram.com/_03.kami?utm_medium=copy_link\nPinterest  : https://pin.it/5PuSGvt\n\n Dont Forget To Follow')
+                m.reply('Script : Sorry This Is Not a Script I Made it Just For Myself\n\n😛\n\nWanna Talk With Me?  : wa.me/+923474187615')
             }
             break
             case 'chat': {
@@ -1138,13 +1139,13 @@ break
                     await sleep(1500)
                     let btn = [{
                                 urlButton: {
-                                    displayText: 'Instagram',
-                                    url: 'https://instagram.com/_03.kami?utm_medium=copy_link'
+                                    displayText: 'WhatsApp',
+                                    url: 'https://wa.me/+923474187615'
                                 }
                             }, {
                                 callButton: {
                                     displayText: 'Number Phone Owner',
-                                    phoneNumber: '+92 302 1206454'
+                                    phoneNumber: '+92 347 4187615'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -1177,13 +1178,13 @@ break
 		    await sleep(1500)
 		    let btn = [{
                                 urlButton: {
-                                    displayText: 'Instagram',
-                                    url: 'https://instagram.com/_03.kami?utm_medium=copy_link'
+                                    displayText: 'WhatsApp',
+                                    url: 'https://wa.me/+923474187615i'
                                 }
                             }, {
                                 callButton: {
                                     displayText: 'Number Phone Owner',
-                                    phoneNumber: '+92 302 1206454'
+                                    phoneNumber: '+92 347 4187615'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -2119,7 +2120,7 @@ break
 ⭔ Like : ${anu.like}
 ⭔ Caption : ${anu.caption}
 ⭔ Url : ${anu.media[0]}
-Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan command ytmp3/ytmp4 dengan url diatas
+To download media, please click one of the buttons below or enter the ytmp3/ytmp4 command with the url above
 `,
 			footer: hisoka.user.name,
 			buttons,
@@ -2835,13 +2836,13 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 └───────⭓`
                 let btn = [{
                                 urlButton: {
-                                    displayText: 'Instagram',
-                                    url: 'https://instagram.com/_03.kami?utm_medium=copy_link'
+                                    displayText: 'WhatsApp',
+                                    url: 'https://wa.me/+923474187615'
                                 }
                             }, {
                                 callButton: {
                                     displayText: 'Number Phone Owner',
-                                    phoneNumber: '+92 302 1206454'
+                                    phoneNumber: '+92 347 4187615'
                                 }
                             }, {
                                 quickReplyButton: {
