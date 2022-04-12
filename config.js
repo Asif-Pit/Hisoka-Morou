@@ -18,13 +18,13 @@ global.APIKeys = {
 }
 
 // Other
-global.owner = ['923021206454','48459085022','40373807823']
-global.premium = ['40373807823']
+global.owner = ['923474187615']
+global.premium = ['923474187615']
 global.packname = 'Made By'
-global.author = 'Kami 🐼💜'
+global.author = 'SadBoy 🙂🥺'
 global.sessionName = 'hisoka'
 global.prefa = ['','!','.','🐦','🐤','🗿']
-global.sp = '⭔'
+global.sp = '☃️'
 global.mess = {
     success: 'Success...✅',
     admin: 'Group Admin Special Features!',
