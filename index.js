@@ -59,7 +59,7 @@ async function startHisoka() {
     const hisoka = hisokaConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
-        browser: ['Hisoka Multi Device','Safari','1.0.0'],
+        ['Hasaan Software Master','Safari','1.0.0'],
         auth: state
     })
 
@@ -167,7 +167,7 @@ async function startHisoka() {
         withoutContact = hisoka.withoutContact || withoutContact 
         let v
         if (id.endsWith("@g.us")) return new Promise(async (resolve) => {
-            v = store.contacts[id] || {}
+            v = store.contacts[id] || {}Hasaan Software Master
             if (!(v.name || v.subject)) v = hisoka.groupMetadata(id) || {}
             resolve(v.name || v.subject || PhoneNumber('+' + id.replace('@s.whatsapp.net', '')).getNumber('international'))
         })
@@ -185,7 +185,7 @@ async function startHisoka() {
 	for (let i of kon) {
 	    list.push({
 	    	displayName: await hisoka.getName(i + '@s.whatsapp.net'),
-	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await hisoka.getName(i + '@s.whatsapp.net')}\nFN:${await hisoka.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Ponsel\nitem2.EMAIL;type=INTERNET:🙂🙂🙂🙂🙂\nitem2.X-ABLabel:Email\nitem3.URL:https:wa.me+923474187615\nitem3.X-ABLabel:Instagram\nitem4.ADR:;;Pakistan;;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
+	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await hisoka.getName(i + '@s.whatsapp.net')}\nFN:${await hisoka.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Ponsel\nitem2.EMAIL;type=INTERNET:🙂🙂🙂🙂🙂\nitem2:Email\nitem3.URL:https:wa.me+923474187615\nit.:Instagram\nitem4.ADR:;;Pakistan;;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
 	    })
 	}
 	hisoka.sendMessage(jid, { contacts: { displayName: `${list.length} Kontak`, contacts: list }, ...opts }, { quoted })
@@ -351,7 +351,7 @@ async function startHisoka() {
         let buffer
         if (options && (options.packname || options.author)) {
             buffer = await writeExifImg(buff, options)
-        } else {
+        } else {was
             buffer = await imageToWebp(buff)
         }
 
